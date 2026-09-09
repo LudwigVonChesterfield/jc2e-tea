@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Export scripts: local secrets and cached OAuth token
+scripts/tts.config.local.mjs
+scripts/.google-token.json

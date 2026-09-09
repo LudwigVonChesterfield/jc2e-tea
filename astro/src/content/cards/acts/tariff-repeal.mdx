@@ -7,20 +7,11 @@ deck:
    reference: acts
 acts:
    title: Duty Repealed
-   regions:
-      - CP
-   # regions:
-   #    - CP: true
-   #    - NE: false
-   #    - SP: false
-   #    - DP: false
-   tags:
-      - duty
 ---
 
 import Layout from "@components/ActCardLayout.astro";
 
-<Layout {...frontmatter.acts} shortTitle textSize={88}>
+<Layout {...frontmatter.acts} shortTitle textSize={75}>
 When passed, discard the current
 **Colonial Duty**.
 
@@ -33,4 +24,7 @@ check for Customs.
 
 Remove an **unrest cube**\
 from each colonized region.
+
+Shuffle this card, and the discarded Act\
+cards into the Acts deck.
 </Layout>

@@ -4,12 +4,12 @@ deck:
    reference: events
    quantity: 1
 card-back:
-   reference: events/backs/southern
+   reference: events/backs/canada
 ---
 import Layout from "@components/EventCardLayout.astro";
 import Peace from "./_peace.md";
 
 <Layout title={frontmatter.title} textSize={90}>
-   Perform a **Bear Crawl (●)**.
    <Peace />
+   Perform a **Bear Crawl (●)**.
 </Layout>

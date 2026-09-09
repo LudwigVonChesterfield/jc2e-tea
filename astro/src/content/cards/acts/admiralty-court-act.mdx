@@ -18,11 +18,12 @@ acts:
    #    - SP: true
    #    - CP: false
    tags:
+      - duty
       - military
 ---
 import Layout from "@components/ActCardLayout.astro";
 
-<Layout {...frontmatter.acts} textSize={95}>
+<Layout {...frontmatter.acts} textSize={80}>
 {/* Add one to the **{frontmatter._["role.govt.customs.full"]}** */}
 {/* dice pool. The **{frontmatter._["role.govt.customs"]}** */}
 {/* does not gain dice by spending regiments. */}
@@ -31,9 +32,10 @@ When passed, add one military unit to the\
 **{frontmatter._["role.govt.army"]}**.
 
 The {frontmatter._["role.govt.military"]} may\
-now Deploy against the smugglers. Each success
-rolled keeps a smuggled order open and earns\
-**£3** of loot.
+now Deploy against the smugglers. A success earns **£6** of
+loot and prevents Smugglers from deploying on this turn.
+
+Place an Extra ship in Commissioner's box for every Smuggler prevented this way.
 
 {/*
 The **{frontmatter._["role.govt.customs"]}**

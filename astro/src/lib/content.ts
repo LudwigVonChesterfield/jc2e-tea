@@ -103,6 +103,11 @@ function defaultCardSchema(context: SchemaContext, deckName?: string) {
       quantity: z.number().default(1).describe(
         "The amount of copies of this card in its deck."
       ),
+      order: z.number().optional().describe(
+        "Forces this card to a fixed position (ascending) at the front of its deck, " +
+        "before any cards without an explicit order. Cards without one keep the default " +
+        "alphabetical-by-title ordering, sorted after all ordered cards."
+      ),
     }).optional(),
 
     background: background(currentContext).partial().optional(),

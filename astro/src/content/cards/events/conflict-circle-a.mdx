@@ -1,15 +1,15 @@
 ---
-title: Conflict (+1)
+title: Conflict (+3)
 deck:
    reference: events
    quantity: 1
 card-back:
-   reference: events/backs/delawarean
+   reference: events/backs/new-england
 ---
 import Layout from "@components/EventCardLayout.astro";
 import Conflict from "./_conflict.md";
 
 <Layout title={frontmatter.title} textSize={77}>
-   Perform a **Bear Crawl (●)**.
    <Conflict />
+   Perform a **Bear Crawl (●)**.
 </Layout>

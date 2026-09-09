@@ -1,0 +1,17 @@
+---
+title: Dispute
+description: >-
+   Very similar to <strong>Turmoil</strong>, just using east/west instead
+   of north.
+deck:
+   reference: events
+   quantity: 1
+card-back:
+   reference: events/backs/southern
+---
+import Layout from "@components/EventCardLayout.astro";
+import Dispute from "./_dispute.md";
+
+<Layout title={frontmatter.title} textSize={90}>
+   <Dispute />
+</Layout>

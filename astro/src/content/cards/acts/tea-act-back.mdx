@@ -10,8 +10,6 @@ background:
    image: "@assets/images/cards/act-bg.png"
 acts:
    title: Tea Regulation
-   tags:
-      - duty
 ---
 import Layout from "@components/ActCardLayout.astro";
 
@@ -22,12 +20,7 @@ in America. The Manager of Shipping may buy player-owned
 ships from a Firm with the shipowner's consent.
 
 When the Company trades successfully,
-add **£1** to the Colonial Treasury per
-filled order.
-
-The **{frontmatter._["role.govt.customs.full"]}**
-should use the rules from the previous Colonial Duty
-for the firms and smugglers.
+add **Value of Tea** to the Colonial Treasury per
+region traded in (rounding down).
 
 </Layout>
-

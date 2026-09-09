@@ -1,0 +1,24 @@
+---
+title: Tea Recall
+deck:
+   reference: acts
+acts:
+   title: Tea Recall
+   regions:
+      - NE
+      - DP
+      - CA
+   tags:
+      - duty
+---
+import Layout from "@components/ActCardLayout.astro";
+
+<Layout {...frontmatter.acts} textSize={80}>
+Lower the **{frontmatter._["tea.track"]}** by 2.
+
+Move the Tea Crates from all pensioners onto this card.
+
+Commissioner may auction Tea Crates off of this card.
+
+If the Colonial Duty changes, discard all Tea Crates from this card.
+</Layout>

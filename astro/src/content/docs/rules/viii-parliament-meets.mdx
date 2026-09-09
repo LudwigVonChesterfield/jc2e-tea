@@ -34,17 +34,24 @@ in voting either way.
    The {frontmatter._["role.govt.tariffs2"]} performs all of the same actions the
    {frontmatter._["role.govt.tariffs"]} would during Parliament Meets.
 
+## Vote Sources
+
+Additionally to other sources of votes, pensioners with a Tea Crate on them have a vote icon. You may rotate or flip the pensioner to indicate they have voted.
+
 ## Resolving the Vote: Additions
 
 Based on how the vote resolves, one of the Trade Acts will be enacted.
 *  Apply any immediate effects of the enacted Trade Act and place it next to the Scenario Board.
    If the newly enacted Trade Act is a _Colonial Duty_, place it on top of the previous _Colonial Duty_.
+*  If the vote failed, but the Secretary of Colonial Department did not vote against it, they get a Passed Law token.
 
 Discard the other Trade Act that was not enacted.
 
 ## The Vote to Regulate Tea
 
-In this scenario, the Prime Minister may initiate a special session of Parliament at the start of the turn before the London Season phase. To do this, the {frontmatter._["credit.track"]} must be less than either the Company Debt or the amount of stored {frontmatter._["tea.token.plural"]}. If the {frontmatter._["credit.track"]} is less than both the Company Debt and the amount of stored {frontmatter._["tea.token.plural"]}, the Prime Minister **must** initiate a special session to vote on Tea Regulation.
+In this scenario, the Prime Minister may initiate a special session of Parliament at the start of the turn before the London Season phase. To do this, the {frontmatter._["credit.track"]} must be less than either the Company Debt or the amount of stored {frontmatter._["tea.token.plural"]}. If the {frontmatter._["credit.track"]} is less than both the Company Debt and the amount of {frontmatter._["tea.token.plural"]} present on the map, the Prime Minister **must** initiate a special session to vote on Tea Regulation.
+
+Secretary issues Board of Trade proposals during this.
 
 When voting, the starting support should start with the amount of stored {frontmatter._["tea.token.plural"]} minus the amount of {frontmatter._["credit.track"]}.
 
@@ -55,8 +62,9 @@ If the {frontmatter._["credit.track"]} is 5 and the Company has 8 stored {frontm
 
 If the vote passes, increase the {frontmatter._["tea.track"]} by one space. Place the Standing marker on the “S” space on the track and place 3 Company ships in the Atlantic. The Prime Minister gains a passed law token. Change the {frontmatter._["role.company.tea"]} to the {frontmatter._["role.company.tea2"]}, per the rules in the {frontmatter._["role.company.tea2"]} section. Refer to the Tea Regulation card for additional changes.
 
-If the law fails, increase the value of Company shares by placing (or flipping) the VP overlay in the Court. Shares cannot be worth more than +/- 3 victory points. __Unlike other proposed laws, this law is not associated with a policy or an act from the {frontmatter._["deck.laws.singular"]} and the Prime Minister does not change hands if it fails nor will this law be discarded. The Prime Minister may also vote against the law.__
+Additionally, clear half of the debt from Colonial Department.
 
+If the law fails, increase the value of Company shares by placing (or flipping) the VP overlay in the Court. Shares cannot be worth more than +/- 3 victory points. __Unlike other proposed laws, this law is not associated with a policy or an act from the {frontmatter._["deck.laws.singular"]} and the Prime Minister does not change hands if it fails nor will this law be discarded. The Prime Minister may also vote against the law.__
 
 <figure class="print:none" style="border-top: 1px solid var(--sl-color-hairline); padding-top: 1.5em;">
    ![Political Cartoon of about the Tea Act of 1773](https://www.americanrevolution.org/wp-content/uploads/2024/04/townshend-acts-political-cartoon-min.png)
@@ -64,3 +72,19 @@ If the law fails, increase the value of Company shares by placing (or flipping) 
       Political Cartoon (hosted by www.americanrevolution.org)
    </figcaption>
 </figure>
+
+## The Vote for a General Indemnity
+
+If Tea Regulation is passed,
+
+In this scenario, the Prime Minister may initiate a special session of Parliament at the start of the turn before the London Season phase.
+
+Secretary issues Board of Trade proposals during this.
+
+When voting, the starting support should be equal to the negative of the amount of pieces in Debtor's Prison and Smuggler's Jail.
+
+If the vote passes, the Prime Minister gets a Passed Law token, then return all pieces from the Debtor's Prison and Smuggler's jail, and flip the Smuggler's jail card. Additionally, lower the Value of Tea by 1.
+
+Additionally, clear half of the debt from the Company and Firms (rounding down).
+
+If the law fails, the opposition leader becomes the Prime Minister, and additionally increase the Value of Tea by 1. The pardon may be proposed again.

@@ -7,6 +7,7 @@ description: >-
    to the Colonies.
 deck:
    reference: acts
+   order: 1
 #    reference: scenario
 # background:
 #    gradient: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7))
@@ -19,7 +20,7 @@ page: true
 ---
 import Layout from "@components/ActCardLayout.astro";
 
-<Layout {...frontmatter.acts} textSize={70} heading="special">
+<Layout {...frontmatter.acts} textSize={69} heading="special">
 <div class="tea">
 
 _At the start of a turn, the Prime Minister may call
@@ -37,10 +38,8 @@ the amount of {frontmatter._["credit.track"]}._
 </div>
 <div class="post-text">
 
-When passed, the Company gains a trade monopoly on tea in America.\
-Raise the **{frontmatter._["tea.track"]}** by 1.\
-Place the Standing marker on the “S” space on the track and\
-**3 Company ships** in the Atlantic.
+When passed, the Company gains a trade monopoly on tea in America. Raise the **{frontmatter._["tea.track"]}** by 1.\
+Place the Standing marker on the “S” space on the track and **3 Company ships** in the Atlantic. Clear half of the debt from Colonial Department.
 
 The **{frontmatter._["role.company.tea"]}**\
 becomes the **{frontmatter._["role.company.tea2"]}**.\

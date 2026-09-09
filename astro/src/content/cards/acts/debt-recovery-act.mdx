@@ -7,6 +7,7 @@ acts:
    regions:
       - CP
       - SP
+      - MR
    #    - DP: true
    #    - NE: false
 previous:
@@ -25,9 +26,7 @@ import Layout from "@components/ActCardLayout.astro";
 <Layout {...frontmatter.acts} shortTitle textSize={100}>
 When passed, raise the __{frontmatter._["credit.track"]}__ by 1.
 
-The __{frontmatter._["role.govt.governor.full"]}__ may
-open inland orders in colonized regions.\
-When rolling, subtract the number
-of __unrest cubes__ in that region.
+When rolling to open an order in a colonized region, Colonial Secretary\
+collects £1 for a succesful roll.
 
 </Layout>

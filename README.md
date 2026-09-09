@@ -1,4 +1,4 @@
-# 1733: Colonial Tea
+# 1733: Colonial Tea - Trouble Brewing
 
 In [1733: Colonial Tea](https://brian-montgomery.github.io/jc2e-tea/), players continue to assume the roles of ambitious families attempting to use both the British East India Company and Colonial America for personal gain. The scenario begins in the 1730s, just as the Company and the southern mainland American Colonies have established their respective charters, Britain has resolved its recent war with Spain, and China has established its first prohibition against opium.
 

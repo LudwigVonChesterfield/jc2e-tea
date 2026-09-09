@@ -1,13 +1,16 @@
 {
-  "name": "jc2e-tea",
+  "name": "jc2e-tea-tb",
   "type": "module",
-  "version": "0.5.2",
+  "version": "0.6.0TB",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "export:pdf": "node scripts/build-pdfs.mjs",
+    "export:tts": "node scripts/build-tts-sheets.mjs",
+    "playwright:install": "playwright install chromium"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.39.2",
@@ -19,5 +22,9 @@
     "astro": "^6.3.6",
     "sharp": "^0.32.6",
     "starlight-markdown-blocks": "^0.1.0"
+  },
+  "devDependencies": {
+    "googleapis": "^178.0.0",
+    "playwright": "^1.63.0"
   }
 }

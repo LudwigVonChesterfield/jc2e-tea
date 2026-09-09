@@ -15,27 +15,12 @@ The law to deregulate **is not present** in this scenario. However, the rules re
 
 After the Family phase is complete and before the Hiring phase, players will now perform the Firms phase. The Firms phase has two steps: Firm Investments and Firm Strategy.
 
-## Firm Investments
+## Firm Investment
 
-The firm investment phase has the following changes:
-
-<div class="indent">
-### Open Bank Loan
-
-If a firm needs additional capital __and does not have any debt__, the firm's manager can choose to take a loan from the Bank. For each bank loan taken:
-*  Place a red debt cube in firm's Shares box.
-*  Decrease the {frontmatter._["credit.track"]} by 1.
-*  Add £5 to the firm's London Treasury.
-
-A bank loan counts as a share in regards to expenses and the ten shares limit. **A red cube in the Shares box may not be traded.**
-
-### Close Bank Loan
-
-A firm's manager may choose to close a loan from the Bank. For each bank loan to be closed:
-*  Pay £5 from the firm's London Treasury.
-*  Remove a red cube from the firm's Shares box.
-*  Increase the {frontmatter._["credit.track"]} by 1.
-</div>
+A firm manager may close a bank loan.
+*  Pay £5 from the firm's treasury.
+*  Remove a red cube in the firm's Shares box.
+*  Raise the {frontmatter._["credit.track"]} by 1 space.
 
 ## Firm Strategy
 
@@ -57,21 +42,17 @@ strategy was “Hobnob,” that firm's ships will not be affected by storms.
 
 ## Filling Orders as a Firm
 
-At the start of a {frontmatter._["role.govt.governor"]}'s Operations (before any actions are taken),
+At the start of the Tea phase,
 all firms reveal their strategy and **declare any regions they wish to trade Tea in**. Make a check with dice equal to:
-*  The amount of cash and  allocated to the strategy.
-*  The amount of {frontmatter._["tea.token.plural"]} acquired, _minus the amount of unrest cubes in the declared regions_.
+*  The amount of cash allocated to the strategy.
+*  Minus the amount of unrest cubes in the declared regions_.
 
-The cash is then paid to the bank and the {frontmatter._["tea.token.plural"]} should be kept in the
-firm's Trade Bid space. If at least one success is rolled, the firm may trade. Each firm that
+The cash is then paid to the bank .
+If at least one success is rolled, the firm may trade. Each firm that
 successfully trades has an initiative value equal to the total of their ships minus the number of
 successful dice (1s and 2s) they rolled. This number can be negative.
 
-Orders are filled after the {frontmatter._["role.govt.customs"]} has made a roll while taking
-the [Customs](/jc2e-tea/rules/iv-department-operation/#customs) action (and the
-{frontmatter._["role.company.tea2"]}, if
-[Tea Regulation](/jc2e-tea/rules/viii-parliament-meets/#the-vote-to-regulate-tea) is passed).
-The current smuggler card determines their initiative.
+The current smuggler card determines smuggler initiative.
 
 Players then fill orders starting with the smugglers, firm or Company with the lowest
 initiative and proceeding to the highest. When it is their turn, the player trading
@@ -90,10 +71,10 @@ number of orders that you have filled.
 
    *  **Trading with Tea.**
       As a firm with {frontmatter._["tea.token.plural"]} remaining is filling orders, it may
-      spend one {frontmatter._["tea.token.singular"]} at an order within its declared regions.
-      Spending a {frontmatter._["tea.token.singular"]} will generate an additional half of
-      the order's listed value, rounding down. Tea may be traded at an order that is already
-      filled. _You may only spend one {frontmatter._["tea.token.singular"]} at each order._
+      place one {frontmatter._["tea.token.singular"]} at an order within its declared regions.
+      Placing a {frontmatter._["tea.token.singular"]} will generate an additional order's listed value.
+      Tea may be traded at an order that is already filled.
+      _You may not place {frontmatter._["tea.token.singular"]} on orders that already have one._
 
 Finally, advance your firm's Value marker one space for each £6 you added to the firm's
 India treasury this turn. Any remaining {frontmatter._["tea.token.plural"]} in the Trade Bid
@@ -113,9 +94,17 @@ whichever is higher.
 
 ### Emergency Loans
 
-A firm facing dissolution may acquire an emergency loan. Treat this the same as an Emergency Investment, using a red debt cube instead of a family marker. Lower the {frontmatter._["credit.track"]} by 1. _If a firm is at the ten shares limit, a debt cube is still added to the Shares box._
+A firm facing dissolution may acquire a single emergency loan. Treat this the same as an Emergency Investment, using a red debt cube instead of a family marker. Lower the {frontmatter._["credit.track"]} by 1. _If a firm is at the ten shares limit, a debt cube is still added to the Shares box._
 
 ### Firm Dividends
 
 When paying dividends, pay the Bank £1 per red cube in the Shares box. The amount paid to the bank **does not count** towards the firm's special retirement amount.
 </div>
+
+### Merging
+
+When Firms merge, transfer Tea Crates and red debt cubes belonging to both Firms to the resulting Firm.
+
+### Bankruptcy
+
+In addition to everything else, Firm's Manager places an additional family member on the Debtor's Prison.

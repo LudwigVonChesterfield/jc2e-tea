@@ -1,0 +1,29 @@
+---
+title: Master of Tea Houses
+background:
+   image: "@assets/images/cards/office-cna.jpeg"
+---
+import DiceCheck from "@components/DiceCheck.astro";
+import Layout from "@components/OfficeCardLayout.astro";
+
+<Layout {...frontmatter} textSize={65}>
+   During the Parliament Meets phase, you may vote with all writers on the Tea Licensing card.
+</Layout>
+
+<style>{`
+.comm-note {
+   margin-top: 0.25em;
+   font-style: italic;
+   font-size: 6pt !important;
+}
+.cmdr-callout {
+   background-color: #E5C2AE;
+   margin: 0.333em auto;
+   padding: 0.333em 1em;
+   font-size: 7pt !important;
+   border: 1px solid black;
+   border-collapse: collapse;
+   corner-shape: scoop;
+   border-radius: 0.4em;
+}
+`}</style>

@@ -4,13 +4,11 @@ deck:
    reference: events
    quantity: 1
 card-back:
-   reference: events/backs/ohio-country
+   reference: events/backs/new-england
 ---
 import Layout from "@components/EventCardLayout.astro";
 
 <Layout title={frontmatter.title} textSize={85}>
-   Locate the region on the top of the draw stack.
-
    If impacted, close all orders in the region.\
    If colonized, add an unrest to the region.\
    Otherwise, add one strength to the region.

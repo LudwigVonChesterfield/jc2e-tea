@@ -28,7 +28,7 @@ const cards = defineCollection({
       acts: z.object({
         title: z.string(),
         regions: z.array(
-          z.enum(['CP', 'DP', 'NE', 'SP'])
+          z.enum(['CP', 'DP', 'NE', 'SP', 'CA', 'OC', 'MR', 'FL'])
         ).max(4).default([]),
         tags: z.string().array().optional(),
       }).optional(),

@@ -1,1 +1,4 @@
 .DS_Store
+
+# Local staging output from astro/scripts/build-tts-sheets.mjs
+/tts-export/

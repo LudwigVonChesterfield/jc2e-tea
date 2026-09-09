@@ -1,36 +1,35 @@
 ---
 title: Commissioner of Customs
-deck:
-   reference: office
 background:
    image: "@assets/images/cards/office-cc.jpeg"
-card-back:
-   reference: office/commissioner-back
 ---
 import Layout from "@components/OfficeCardLayout.astro";
 import DiceCheck from "@components/DiceCheck.astro";
 
-<Layout {...frontmatter} textSize={72}>
+<Layout {...frontmatter} textSize={65}>
 
 **First**, draw a smuggler card.\
 **Next**, may take a Customs action:
 
 <DiceCheck>
    <Fragment slot="dice-pool">
-      _Determined by C. Duty._\
-      _May use military units\
-      to add dice, with approval._
+      _Determined by C. Duty._
+      _May add approved military units._
    </Fragment>
    <Fragment slot="dice-success">
-      Fill orders and increase\
+      Collect orders and increase\
       the Colonial Treasury.
 
-      <div class="bonus">You gain £1 per taxed order.</div>
-      <div class="bonus">Players gain £1 for each collector placed.</div>
+      <div class="bonus">Players gain £1 for each collector that acted.</div>
    </Fragment>
 </DiceCheck>
 
-<p style="font-size: 60%; font-style: italic">Place a closed order (instead of filled) <br/>for each catastrophic failure rolled.</p>
+<p style="font-size: 55%; font-style: italic">Place a closed order for each catastrophic failure.</p>
+
+**Next**, Auction the condemned:
+
+<div class="bonus">Gain £1 per succesfully sold lot, otherwise lose £1.</div>
+
 </Layout>
 
 <style> {`

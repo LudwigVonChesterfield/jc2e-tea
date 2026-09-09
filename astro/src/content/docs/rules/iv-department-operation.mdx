@@ -75,7 +75,7 @@ but they must be given the opportunity to act. Each position must finish all of
 its actions before the next one may begin (players may flip their family members
 facedown after to track which have acted).
 
-All of the Funding, Oversight and Trade in America actions can be taken anytime during the
+All of the Funding, Bail, Oversight actions can be taken anytime during the
 {frontmatter._["role.govt.governor"]}'s operations. The {frontmatter._["role.govt.governor"]}
 takes a series of Oversight actions using a diminishing dice pool. First,
 take dice equal to the number listed on the office card. Then you may take
@@ -89,15 +89,11 @@ an Oversight action.
 
 
 <div class="indent">
-### Funding <Badge text="Clarified" />
-
-Funding may be taken at any time during your turn to add £5 and a red debt cube
-to your treasury. _Remember to lower the {frontmatter._["credit.track"]} by 1._
-This action may only be used once per turn during peacetime; this action may be
-used twice if [War is Declared](/jc2e-tea/rules/vii-events/#war-declared-).
-__This action cannot be taken if the {frontmatter._["credit.track"]} is at 0.__
-
 import { Badge } from "@astrojs/starlight/components"
+
+### Bail <Badge text="Clarified" />
+
+At the start of your turn you must declare a number. Any player that places that amount of £ into the Colonial Department may return a piece from the Smuggler's Jail. Players may pay bail multiple times per turn. The bail must be at least 1£.
 
 ### Oversight <Badge text="Clarified" />
 
@@ -105,23 +101,27 @@ Make a check using the number of dice remaining in the pool. There is
 no penalty. You may add dice to this roll by spending £1 from your treasury.
 
 If successful, choose one of the two following options.
+*  __Raise Funds__.
+   Add a red debt cube and 5£ to your treasury. __This action cannot be taken if the {frontmatter._["credit.track"]} is at 0.__
 *  __Commission Military Unit__.
    Place a military unit from the supply to the Army of North America.
    Military units are treated like regiments.
 *  __Open an Order__.
-   Open one closed order in any _foreign-settled region_ in America.
+   Open one closed order in America.
+
+:::bonus
+The Secretary takes £1 from the bank for every raise funds action performed.
+:::
 
 __Lower the number of dice in the pool by 1 and remove any dice from the pool gained
 by spending £, regardless of its result.__ You may continue taking the Oversight action
 until one of the following happens: you roll a catastrophic failure, you run out of
 dice, or you decide to stop.
 
-### Trade in America
+### Tea Phase
 
 The smugglers, firms -- and possibly the {frontmatter._["role.company.tea2"]} --
-may fill orders in America during the Trade in America action. The
-{frontmatter._["role.govt.governor"]} decides when this action occurs during
-their turn, but does not take an active part in it.
+may fill orders in America during the Tea phase.
 
 Players fill orders starting with the participant with the lowest initiative
 and proceeding to the highest. When it is the smugglers turn, the
@@ -143,11 +143,24 @@ The {frontmatter._["role.govt.customs.full"]} must draw a
 {frontmatter._["deck.trades.singular"]} card. This card indicates how much initiative
 and which orders the Smugglers are going to use to trade this turn.
 
+// Somehow Smugglers should also occasionally have more Tea Crates.
+Afterwards, Families place their Smugglers in the order they are on the Smuggler's Path card.
+Roll a d6 for every Family member on the Smuggler's Path card, on a 6 they return to supply, with Tea Crates staying
+on Smuggler's Path in the spot they were in.
+Then, place Order Filled tokens on the remaining non-closed Orders indicated on the Smuggler card.
+Place a Tea Crate, and Tea Crates from their Smuggler's Path on Order Filled tokens and Family members placed this way.
+
 Then, the {frontmatter._["role.govt.customs"]} may take the Customs action before
 the smugglers turn during Trade in America to extract tariffs from the smuggled orders
 and raise funds for the Colonial Treasury. The current Colonial Duty will provide both
 the base amount of dice to roll and the amount in tariffs the
 {frontmatter._["role.govt.office"]} may receive.
+
+### Firing
+
+// Alternative: Whenever a Secretary needs to go to prison or jail, but is absent, the previous Secretary goes to prison or jail instead.
+Whenever Secretary leaves their position without putting their piece in the pension box or Debtor's Prison,
+place their piece in the Smuggler's Jail.
 
 <div class="indent">
    ### Customs
@@ -166,24 +179,53 @@ the base amount of dice to roll and the amount in tariffs the
    success, increase the Colonial Treasury by the amount listed on the current Colonial
    Duty.
 
+   If the region you place the collector in is impacted, place an unrest cube there.
+
+   Placed collectors may refuse to jail Smugglers.
+
    *  **One Customs Collection.**
       The {frontmatter._["role.govt.customs"]} may only successfully collect customs
       at most once per game turn.
 
    :::bonus
-   Then, you take £1 from the bank for each tariff collected.
-   :::
-
-   :::bonus
-   Finally, each player takes £1 from the bank for each of their collectors you
-   placed on an order.
+   Finally, each player takes £1 from the bank for a Smuggler they jailed.
    :::
 
    **For each catastrophic failure rolled,** place a closed order token on one of the
    marked orders on the smuggler card that is not closed on the board.
 
-   For each of the remaining orders on the smuggler card that are not closed on the board,
-   place a filled order token on it.
+   After, return remaining Collectors to the Collectors box.
+
+   During trading, for each of the remaining family members with Tea Crates on top, on orders that haven't been filled with Tea by a Firm or Company,
+   their respective Family collects the amount of £ indicated on the Order filled. If they have more than one Tea Crate on their spot, for each crate except the first they also collect half the value of the order.
+
+   **Successes are only counted, if the sent Collector did not refuse to act. For each success place a Tea Crate and an Extra Ship in the Commissioner's box. If a family member with multiple Tea Crates traded, place all Tea Crates in the box.**
+
+   ### Auction
+
+   Pick any collection of Tea Crates and Extra Ships.
+
+   Firms, Families, and the Company (with Chairman bidding) may bid on them. Commissioner's Family may not bid on the lots. Commissioner's Firm may bid on the lots.
+
+   Whoever bids most must get the whole collection. On ties, you may choose the buyer in any way. Place the bid into the Secretary's box.
+
+   Bids may be placed only by players who can place at least one item from the lot.
+
+   Firms:
+   - May take up to their number of ships of Tea Crates into their Firm.
+   - Take Extra Ships into their London Treasury box. They must place them into the Ships box in the Firms phase, pay them off during the Revenue phase, and discard them in the Upkeep & Refresh phase.
+
+   Families:
+   - May place Tea Crates on pensioners on prize boxes that don't have Tea Crates on them.
+   - Place any bought Extra Ships on their shipyard's Vote Icon to get £1 for every Extra Ship purchased.
+
+   The Company:
+   - Places any bought Tea Crates into Director of Warehouse's upper part of the box.
+   - Places any bought Extra Ships into the Manager's of Shipping box. They may place those ships in any eligible Sea Zone.
+
+   For every succesfully sold lot, take £1 from the bank. For every unsuccessfully sold lot, put £1 into the bank. 
+
+   Repeat until no Tea Crates or Extra Ships remain.
 
 </div>
 
@@ -207,6 +249,9 @@ for the Presidents in India. Local alliances may be purchased with permission fr
 officers and local alliances. Dice are lowered by the amount of region strength.
 The {frontmatter._["role.govt.military.full"]} does not retire during the London
 Season.
+
+Before Deploying, the Commander may transfer any Collectors from the Collectors box to the Army
+box, with Commisioner of Custom's consent.
 
 The differences with the Deploy action is as follows:
 <div class="indent">
@@ -239,3 +284,25 @@ The differences with the Deploy action is as follows:
       remove one unrest cube for each success rolled and add one unrest cube
       for each 5-6 rolled.
 </div>
+
+## Value of Tea
+
+Whenever the Company loses a region in America, decrease the Value of Tea by 1.
+
+Whenever the Company colonizes a region in America, increase the Value of Tea by 1.
+
+## Debt / Unrest Markers
+
+Whenever the Company, Firm, or the Colonial Department takes debt - they take a Debt marker
+from supply.
+
+Whenever an Unrest marker needs to be placed in America, take a Debt marker from supply.
+
+When there are no more Debt markers left in supply, and a marker needs to be placed -
+process a Revolt Event.
+
+Whenever a region stops being colonized, remove Unrest markers from it.
+
+## Order
+
+Director -> Commander -> Customs -> Secretary -> Tea

@@ -1,8 +1,4 @@
-Locate the region on the top
-of the draw stack.
-
-If colonized, close the westernmost open order.\
-Otherwise, close the easternmost open order.
+Close the westernmost open order.
 
 If all orders are closed, perform a Cascade.
 

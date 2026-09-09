@@ -11,6 +11,10 @@ deck:
 #    - DP: false
 acts:
    title: Tea Duties Lowered
+   regions:
+      - SP
+      - MR
+      - FL
    tags:
       - tea
 ---
@@ -20,13 +24,9 @@ import Layout from "@components/ActCardLayout.astro";
    When passed, raise\
    the **Value of Tea** by 2.
 
-   {/* During the tea auction,
-   Firms may pay £1 for 2 crates. */}
+   When trading with Tea, Firms and Smugglers gain an additional £1 per Tea Crate.
 
    Each turn, during upkeep,
    players must pay
-   a **window tax**.\
-   If window taxes are **repealed**,
-   lower the **{frontmatter._['credit.track']}**
-   by 1 instead.
+   a **window tax**.
 </Layout>

@@ -14,9 +14,15 @@ import exportIcon from "@assets/images/export-icon.png";
 In this scenario, the Superintendent of China is open at the start.
 
 <div class="indent">
+### Trade in China: Tea Profits
+
+In this scenario, the Superintendent of China does not add £s to the Company Balance. Instead, the Company must Auction Tea Crates gained from their Trade in China.
+</div>
+
+<div class="indent">
 ### Trade in China: Silver
 
-When trading in China, if the company has no export icons in Company-controlled regions, the Superintendent may trade with silver. When trading with silver, a successful trade earns (a) £2 for the Company Balance, and (b) for the rest of the turn, act as if the company has one company-controlled export icon. _This export icon is used for the Superintendent's bonus and acquiring Tea_.
+When trading in China, if the company has no export icons in Company-controlled regions, the Superintendent may trade with silver. When trading with silver, a successful trade allows to for the rest of the turn, act as if the company has one company-controlled export icon with value 2. _This export icon is used for the Superintendent's bonus and acquiring Tea_.
 </div>
 
 ## {frontmatter._["role.company.tea"]}
@@ -38,22 +44,48 @@ During the Tea phase, take the following actions:
    If Trade in China was successful, the {frontmatter._["role.company.tea"]} acquires Tea to trade.
    Determine the number of export icons in company-controlled regions (1 if [silver](#trade-in-china-silver) was used to trade) and multiply that by the current value on the {frontmatter._["tea.track"]}, [rounding to the closest number](#tea-conversion). Place that resulting amount of {frontmatter._["tea.token.plural"]} in the top half of your treasury.
 
+   * Values below might vary if things affect Export Icon value. General formula is Amount of Icons * Value of Export Icon / Value of Tea rounded down.
+
    :::figure[_{frontmatter._["tea.track"]}_ Conversion Table]{id="tea-conversion"}
    | <Image id="exportIcon" src={exportIcon} height={24} width={36} alt="Export Icons" /> | 1<Fr num="1" den="3" /> | 1<Fr num="2" den="3" /> |  2 | 2<Fr num="1" den="3" /> | 2<Fr num="2" den="3" /> |  3 | 3<Fr num="1" den="3" /> |
    |:------------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-   |      1       |  1 |  2 |  2 |  2 |  3 |  3 |  3 |
-   |      2       |  3 |  3 |  4 |  5 |  5 |  6 |  7 |
-   |      3       |  4 |  5 |  6 |  7 |  8 |  9 | 10 |
-   |      4       |  5 |  7 |  8 |  9 | 11 | 12 | 13 |
-   |      5       |  7 |  8 | 10 | 12 | 13 | 15 | 17 |
+   |      1       |  3 |  2 |  2 |  1 |  1 |  1 |  1 |
+   |      2       |  6 |  4 |  4 |  3 |  3 |  2 |  2 |
+   |      3       |  9 |  7 |  6 |  5 |  4 |  4 |  3 |
+   |      4       | 12 | 10 |  8 |  6 |  6 |  5 |  4 |
+   |      5       | 15 | 12 | 10 |  8 |  7 |  6 |  6 |
+   :::
+
+   :::figure[_{frontmatter._["tea.track"]}_ Conversion Table]{id="tea-conversion"}
+   | <Image id="exportIcon" src={exportIcon} height={24} width={36} alt="Export Icons" /> | 1<Fr num="1" den="3" /> | 1<Fr num="2" den="3" /> |  2 | 2<Fr num="1" den="3" /> | 2<Fr num="2" den="3" /> |  3 | 3<Fr num="1" den="3" /> |
+   |:------------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+   |      1       |  3 |  2 |  2 |  1 |  1 |  1 |  1 |
+   |      2       |  6 |  4 |  4 |  3 |  3 |  2 |  2 |
+   |      3       |  9 |  7 |  6 |  5 |  4 |  4 |  3 |
+   |      4       | 12 | 10 |  8 |  6 |  6 |  5 |  4 |
+   |      5       | 15 | 12 | 10 |  8 |  7 |  6 |  6 |
    :::
 
    ### Auction
 
-   You may exchange {frontmatter._["tea.token.plural"]} from your treasury (from the top, the bottom or both) to the firms, up to their number of ships. A firm must pay **a minimum** of £1 for each {frontmatter._["tea.token.singular"]} bought. All funds exchanged from the firm must be paid from the Trade Bid space to the Company Balance. _Any other additional terms may be negotiated._
+   1. Choose an amount of Tea Crates to trade away.
+   2. Anyone, at any time, may name a price with a minimum of Value of Tea rounded down, which if chosen must be deposited to the Company balance. No one can name a price higher than they can afford.
+   3. If anyone names a price higher than the previous highest price, you must sell to them. They must complete the purchase.
+   4. If no one names a price, the Tea Crates must be deposited to the bottom half. You are paid £1 from Company Balance for every Tea Crate stored this way. Then, return £1 back to the Company.
+   5. _Any other additional terms may be negotiated. If multiple parties offer the same amount of money for the crates you may freely choose whom to sell to._
+
+   Firms can only use the £ allocated to their Trading bid to trade.
+   Families can only use Family treasury to bid.
+   A Firm must choose whether they bid as a Firm or as a Family. They may bid with both.
 
    Each firm may have an amount of {frontmatter._["tea.token.plural"]} up to their number of ships.
-   _A firm cannot procure more {frontmatter._["tea.token.plural"]} than it can hold_.
+
+   Each family may have an amount of {frontmatter._["tea.token.plural"]} up to their number of pensioners on prize boxes.
+
+   If as a result of an Auction, a Firm or Family obtains more Tea Crates than they can hold, place leftover Tea Crates on the Smuggler's Path as you would during the Family phase.
+   Additionally, if more than a single Tea Crate were placed on Smuggler's path this way, place the Director piece into Smuggler's jail, and the Director/Consignor card into the Vacant Offices.
+
+   Repeat the Auction actions until no Tea Crates remain, or you are no longer the Director/Consignor.
 
    <figure class="tea-auction">
       ![East India House Tea Auction, London 1808](https://www.bostonteapartyship.com/wp-content/uploads/2019/10/East-Indies-Tea-Auction-London-1803.jpg)
@@ -121,17 +153,16 @@ Determine the number of export icons in company-controlled regions (1 if [silver
 
 When the {frontmatter._["role.govt.governor.full"]} allows Trade in America, the {frontmatter._["role.company.tea2"]} determines their dice pool with the following steps:
 
-1. Declare the **colonized regions in America** in which you wish to trade. You cannot include regions that are _foreign-settled_, regions that you could not trade in because you do not have enough ships or because you could not fill an order because a connecting order is closed. **Consider the three ports in America to be connected.**
+1. Declare the **colonized regions in America** in which you wish to trade. You cannot include regions that are _foreign-settled_, regions that you could not trade in because you do not have enough ships or because you could not fill an order because a connecting order is closed. Additionally, you may not fill orders that have Tea Crates on them. You may not fill more orders than you use Tea Crates to trade. **Consider the three ports in America to be connected.**
 
-2. Make a check. Add one die per {frontmatter._["tea.token.singular"]} in your treasury that you wish to trade. You may use {frontmatter._["tea.token.plural"]} in either half of your treasury. Subtract one die for each unrest cube in each region that you declared in step 1 from your total dice.
+2. Make a check. Add one die per {frontmatter._["tea.token.singular"]} in your treasury that you wish to trade. You may use {frontmatter._["tea.token.plural"]} in the either half of your treasury. Subtract one die for each unrest cube in each region that you declared in step 1 from your total dice.
 
 **If successful**, follow the firms rule for initiative. When it's your turn to place writers, place one filled order token **for each ship** in the declared regions, starting with a port on one of those regions (just as you would in India).
+   *  Place a Tea Crate on every order filled this way.
    *  For each _order filled_, increase the Company Balance by the amount listed on the order.
-   *  For each _region you traded in_, add £1 to the Colonial Treasury.
+   *  For each _region you traded in_, add Value of Tea rounded down of £ to the Colonial Treasury.
 
-:::bonus
-Take £1 from the bank for each order you filled.
-:::
+If Consignor of Tea failed to Trade Tea but did not fail catastrophically, they take 1£ from the Colonial Department. If there is no money to take, Secretary must take an Emergency Funding action. Count it into the actions needed for them to be fired.
 
 Afterwards, discard all {frontmatter._["tea.token.plural"]} used to roll die.
 

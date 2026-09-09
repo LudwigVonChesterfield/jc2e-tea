@@ -14,25 +14,27 @@ acts:
    #    - CP: false
    tags:
       - military
+   regions:
+      - CA
+      - OC
+      - MR
+      - FL
 ---
 import Layout from "@components/ActCardLayout.astro";
 
 <Layout {...frontmatter.acts} textSize={80}>
 
-When passed, flip the
-speculation tokens over in\
-**uncolonized** regions.
-
 When a player **seeks a share** during
 Family Actions,\
-they may also pay **£1** to\
+they may instead pay **£1** to\
+the Colonial Department to\
 place a family marker on\
 this card (acting as a share).
 
-When a region that has a
-speculaton token is __colonized__,\
+When a region is __colonized__,\
+before opening all orders,
 divide the amount listed on\
-the token evenly between\
+all open orders evenly between\
 the markers on this card\
 (rounding down).
 </Layout>

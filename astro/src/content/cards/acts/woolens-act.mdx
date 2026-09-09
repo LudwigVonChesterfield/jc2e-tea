@@ -8,22 +8,19 @@ description: >-
 acts:
    title: Woolens Regulations
    regions:
-      - SP: true
-      - CP: false
-      - NE: false
-      - DP: false
+      - DP
    tags:
       - duty
       - manufacturing
 ---
 import Layout from "@components/ActCardLayout.astro";
 
-<Layout {...frontmatter} textSize={90}>
+<Layout {...frontmatter.acts} shortTitle textSize={85}>
 When rolling Customs checks,
-use **3** dice.\
+use **4** dice.\
 Do not place collectors,
-instead open a smuggler\
-order for each success.
+instead jail a smuggler\
+for each success.
 
 When a firm fills an order,\
 it may choose a

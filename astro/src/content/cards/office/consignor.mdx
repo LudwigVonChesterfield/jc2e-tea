@@ -1,34 +1,28 @@
 ---
 title: Consignor of Tea in America
-deck:
-   reference: office
 background:
    image: "@assets/images/cards/office-tea.jpeg"
-card-back:
-   reference: office/consignor-back
 ---
 import DiceCheck from "@components/DiceCheck.astro";
 import Layout from "@components/OfficeCardLayout.astro";
 
-<Layout {...frontmatter} textSize={65}>
-   **First**, if trade in China was successful, place {frontmatter._["tea.token.plural"].toLowerCase()} in your treasury:
+<Layout {...frontmatter} textSize={63}>
+   **First**, if trade in China was successful, place {frontmatter._["tea.token.plural"].toLowerCase()} in your treasury.
 
-   <p style="font-size: 65%; margin-bottom: 0.75em;">_Export Icons_ &nbsp;**x** _{frontmatter._["tea.track"]}_</p>
-
-   **Next**, may take one Trade Tea action:
+   **In Tea phase**, may take one Trade Tea action:
 
    <DiceCheck>
       <Fragment slot="dice-pool">
          _Add die per tea crate. Remove die per unrest in declared regions._
       </Fragment>
       <div slot="dice-success" class="consignor-success">
-         Fill orders and increase\
+         Fill orders with Tea and increase
          the Company Balance.
 
-         Add £1 per region to\
+         Add __Value of Tea__ per region rounding down to
          the Colonial Treasury.
 
-         <div class="bonus">You gain £1 per order.</div>
+         <div class="bonus">You gain £1 from Colonial Treasury if you fail the roll.</div>
       </div>
    </DiceCheck>
 </Layout>

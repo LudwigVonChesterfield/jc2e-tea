@@ -1,0 +1,56 @@
+---
+title: General Indemnity Act
+description: >-
+   The card to pardon all smugglers and debtors. This card references a proposal by a committee for a
+   "a general Act of Indemnity to all Persons guilty of any Crimes against the Laws, for preventing the Running uncustomed Goods"
+deck:
+   reference: acts
+   order: 2
+#    reference: scenario
+# background:
+#    gradient: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7))
+#    image: "@assets/images/cards/act-bg.png"
+card-back:
+   reference: acts/tea-act-back
+acts:
+   title: General Indemnity
+page: true
+---
+import Layout from "@components/ActCardLayout.astro";
+
+<Layout {...frontmatter.acts} textSize={70} heading="special">
+<div class="tea">
+
+_At the start of a turn, the Prime Minister may call
+a session of Parliament to vote on this law if the
+Tea Regulation has been passed._
+
+_The initial support of the law equals to minus
+the amount of pieces on Debtor's Prison and Smuggler's Jail._
+
+</div>
+<div class="post-text">
+
+When passed, the Prime Minister gets a Passed Law token, lower the **{frontmatter._["tea.track"]}** by 1.
+Return all pieces from the Debtor's Prison, Smuggler's jail, and flip the Smuggler's jail card.
+Additionally, clear half of the debt from the Company and Firms.
+
+If failed, the Opposition Leader becomes the new Prime Minister, and increase **{frontmatter._["tea.track"]}** by 1. The pardon may be proposed again.
+
+</div>
+</Layout>
+
+<style>{`
+.tea em {
+   display: inline-block;
+   font-size: 6.25pt;
+   font-style: italic;
+   line-height: 1.2em;
+}
+.post-text p {
+   line-height: 1.15em;
+}
+.post-text p:last-child {
+   {/* margin-bottom: 0; */}
+}
+`}</style>
